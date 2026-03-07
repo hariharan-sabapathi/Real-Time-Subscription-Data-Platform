@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: intermediate_subscription_improved
+    description: Latest subscription state per subscription_id
+
+    columns:
+      - name: subscription_id
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        tests:
+          - not_null

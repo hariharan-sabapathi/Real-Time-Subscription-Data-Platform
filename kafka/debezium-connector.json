@@ -1,0 +1,17 @@
+{
+  "name": "saas-postgres-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "saas_user",
+    "database.password": "saas_password",
+    "database.dbname": "saas_db",
+    "database.server.name": "saas_server",
+    "plugin.name": "pgoutput",
+    "slot.name": "saas_slot",
+    "publication.autocreate.mode": "filtered",
+    "table.include.list": "public.users,public.subscriptions,public.invoices,public.payments",
+    "topic.prefix": "saas"
+  }
+}

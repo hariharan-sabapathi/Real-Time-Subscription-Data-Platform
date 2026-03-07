@@ -1,0 +1,50 @@
+version: 2
+
+models:
+
+  - name: staging_users
+    description: "Users table from CDC silver layer"
+
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
+
+      - name: email
+        tests:
+          - not_null
+          - unique
+
+
+  - name: staging_subscription
+    description: "Subscription events from CDC"
+
+    columns:
+      - name: subscription_id
+        tests:
+          - not_null
+
+      - name: user_id
+        tests:
+          - not_null
+
+
+  - name: staging_invoices
+    description: "Invoices generated for subscriptions"
+
+    columns:
+      - name: invoice_id
+        tests:
+          - not_null
+          - unique
+
+
+  - name: staging_payments
+    description: "Payments made for invoices"
+
+    columns:
+      - name: payment_id
+        tests:
+          - not_null
+          - unique

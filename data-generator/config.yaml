@@ -1,0 +1,12 @@
+database:
+  host: 127.0.0.1
+  port: 5433
+  user: saas_user
+  password: saas_password
+  dbname: saas_db
+
+generation:
+  user_probability: 0.3
+  subscription_probability: 0.4
+  payment_probability: 0.6
+  sleep_seconds: 2

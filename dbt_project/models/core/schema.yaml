@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: postgres
+    schema: public
+    tables:
+      - name: plans
+
+models:
+  - name: table_users
+    description: Users dimension table
+
+  - name: table_plans
+    description: Plans dimension table
+
+  - name: table_subscription_snapshot
+    description: Latest subscription state
+
+  - name: table_subscription_revenue
+    description: Subscription revenue fact table
