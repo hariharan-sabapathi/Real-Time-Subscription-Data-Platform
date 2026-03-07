@@ -1,0 +1,48 @@
+# -----------------------------
+# Environment variables
+# -----------------------------
+.env
+
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+
+# -----------------------------
+# dbt
+# -----------------------------
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+dbt_project/.user.yml
+dbt_project/derby.log
+
+# -----------------------------
+# Spark / Hive metastore
+# -----------------------------
+metastore_db/
+derby.log
+
+# -----------------------------
+# Airflow
+# -----------------------------
+airflow/logs/
+airflow/airflow.db
+airflow/standalone_admin_password.txt
+
+# -----------------------------
+# Docker
+# -----------------------------
+*.pid
+*.sock
+
+# -----------------------------
+# System files
+# -----------------------------
+.DS_Store
+Thumbs.db
