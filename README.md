@@ -21,6 +21,9 @@ The entire platform is **fully containerized using Docker Compose** and orchestr
 The system follows a **Lakehouse Medallion Architecture**.
 
 ```
+Data Generator
+        │
+        ▼
 PostgreSQL (Source DB)
         │
         ▼
@@ -64,7 +67,32 @@ Entities include:
 - Payments
 - Invoices
 
-The database is configured with **logical replication (WAL)** to enable **Change Data Capture (CDC)** using Debezium.
+The database is configured with logical replication (WAL) to enable Change Data Capture (CDC) using Debezium.
+
+---
+
+### Data Generator
+
+To simulate real SaaS platform activity, the project includes a **synthetic data generator built with Python and Faker**.
+
+The generator continuously creates realistic SaaS events such as:
+
+- New user registrations
+- Subscription creations and updates
+- Payment transactions
+- Invoice generation
+
+These events populate the PostgreSQL database with transactional data that is captured using **Debezium CDC** and streamed into Kafka for downstream processing.
+
+Generator scripts include:
+```
+users.py
+subscriptions.py
+payments.py
+invoices.py
+```
+
+This enables the platform to simulate a **live SaaS environment for testing real-time data pipelines**.
 
 ---
 
@@ -361,3 +389,4 @@ Potential enhancements include:
 ## Author
 
 **Hariharan Nadanasabapathi**
+
