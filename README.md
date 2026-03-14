@@ -295,11 +295,9 @@ saas-subscription-lakehouse/
 │        └── marts/
 │
 ├── airflow/
-│   └── dags/
-│       └── lakehouse_pipeline.py
-│
-└── powerbi/
-    └── dashboards.pbix
+    └── dags/
+        └── lakehouse_pipeline.py
+
 ```
 
 ---
