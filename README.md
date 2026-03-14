@@ -294,7 +294,7 @@ saas-subscription-lakehouse/
 │        ├── core/
 │        └── marts/
 │
-├── airflow/
+└── airflow/
     └── dags/
         └── lakehouse_pipeline.py
 
