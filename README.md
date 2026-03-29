@@ -1,10 +1,10 @@
-# SaaS Subscription Lakehouse
+# Real-Time Subscription Data Platform
 **Apache Kafka · Apache Spark · Debezium · Delta Lake · dbt · Apache Airflow · PostgreSQL · Docker**
 
 ---
 
 ## Overview
-This project implements a real-time SaaS analytics platform using modern data stack built with open-source technologies.
+This project implements a real-time subscription data platform using modern data stack built with open-source technologies.
 The platform ingests **subscription, payment, and invoice events** in real time, processes them using **Spark Structured Streaming**, stores them in **Delta Lake**, and transforms them with **dbt** to power business analytics such as:
 
 - Monthly Recurring Revenue (MRR)
@@ -251,7 +251,7 @@ This ensures reliable pipeline scheduling and monitoring.
 ## Repository Structure
 
 ```
-saas-subscription-lakehouse/
+Real-Time Subscription Data Platform/
 │
 ├── docker-compose.yaml
 ├── README.md
